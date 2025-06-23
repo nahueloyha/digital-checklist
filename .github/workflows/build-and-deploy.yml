@@ -1,0 +1,50 @@
+name: 🚀 Build and Deploy Web App
+
+on:
+  workflow_dispatch: # Manual dispatch
+  push:
+    branches: [ main ]
+    paths: 
+      - 'web/**'
+      - 'personal-security-checklist.yml'
+      - 'simple-checklist.yml'
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository 🛎️
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js 📦
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'yarn'
+          cache-dependency-path: 'web/yarn.lock'
+
+      - name: Install dependencies 📥
+        working-directory: ./web
+        run: yarn install --frozen-lockfile
+
+      - name: Build application 🔨
+        working-directory: ./web
+        run: yarn build.static
+
+      - name: Upload build artifacts 📤
+        uses: actions/upload-artifact@v4
+        with:
+          name: web-dist
+          path: web/dist/
+          retention-days: 7
+
+      - name: Deploy to GitHub Pages 🚀
+        if: github.ref == 'refs/heads/main'
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./web/dist
+
