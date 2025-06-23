@@ -1,0 +1,140 @@
+- point: Use a Strong Password
+  category: Authentication
+  priority: Essential
+  details: >-
+    If your password is too short, or contains dictionary words, places or names- then it can be easily
+    cracked through brute force, or guessed by someone. The easiest way to make a strong password, is by
+    making it long (12+ characters)- consider using a 'passphrase', made up of many words. Alternatively,
+    use a password generator to create a long, strong random password. Have a play with
+    [Security.org's How Secure Is My Password?](https://security.org/how-secure-is-my-password/), to get an idea of how quickly common
+    passwords can be cracked. Read more about creating strong passwords:
+    [securityinabox.org](https://securityinabox.org/en/passwords/passwords-and-2fa/)
+
+- point: Use a Secure Password Manager
+  category: Authentication
+  priority: Essential
+  details: >-
+    For most people it is going to be near-impossible to remember hundreds of strong and unique passwords.
+    A password manager is an application that generates, stores and auto-fills your login credentials for you.
+    All your passwords will be encrypted against 1 master passwords (which you must remember, and it should be
+    very strong). Most password managers have browser extensions and mobile apps, so whatever device you are on,
+    your passwords can be auto-filled. A good all-rounder is
+    [Bitwarden](https://awesome-privacy.xyz/essentials/password-managers/bitwarden), or see
+    [Recommended Password Managers](https://awesome-privacy.xyz/essentials/password-managers)
+
+- point: Enable 2-Factor Authentication
+  category: Authentication
+  priority: Essential
+  details: >-
+    2FA is where you must provide both something you know (a password) and something you have (such as a
+    code on your phone) to log in. This means that if anyone has got your password (e.g. through phishing,
+    malware or a data breach), they will not be able to log into your account. It's easy to get started,
+    download [an authenticator app](https://github.com/Lissy93/awesome-privacy#2-factor-authentication)
+    onto your phone, and then go to your account security settings and follow the steps to enable 2FA. Next
+    time you log in on a new device, you will be prompted for the code that displays in the app on your phone
+    (it works without internet, and the code usually changes every 30-seconds)
+
+- point: Keep Backup Codes Safe
+  category: Authentication
+  priority: Essential
+  details: >-
+    When you enable multi-factor authentication, you will usually be given several codes that you can use if
+    your 2FA method is lost, broken or unavailable. Keep these codes somewhere safe to prevent loss or
+    unauthorized access. You should store these on paper or in a safe place on disk (e.g. in offline storage
+    or in an encrypted file/drive). Don't store these in your Password Manager as 2FA sources and passwords
+    and should be kept separately.
+
+- point: Avoid using SMS for 2FA
+  category: Authentication
+  priority: Optional
+  details: >-
+    When enabling multi-factor authentication, opt for app-based codes or a hardware token, if supported. SMS is
+    susceptible to a number of common threats, such as [SIM-swapping](https://www.maketecheasier.com/sim-card-hijacking)
+    and [interception](https://secure-voice.com/ss7_attacks). There's also no guarantee of how securely your phone
+    number will be stored, or what else it will be used for. From a practical point of view, SMS will only work when
+    you have signal, and can be slow. If a website or service requires the usage of a SMS number for recovery consider
+    purchasing a second pre-paid phone number only used for account recovery for these instances.
+
+- point: Avoid using your PM to Generate OTPs
+  category: Authentication
+  priority: Advanced
+  details: >-
+    Many password managers are also able to generate 2FA codes. It is best not to use your primary password manager
+    as your 2FA authenticator as well, since it would become a single point of failure if compromised. Instead use a
+    dedicated [authenticator app](https://github.com/Lissy93/awesome-privacy#2-factor-authentication) on your phone or laptop
+
+- point: Make sure your browser is up to date
+  category: Web Browsing
+  priority: Essential
+  details: >-
+    Browser vulnerabilities are constantly being discovered and patched, so it's important to keep it up to date,
+    to avoid a zero-day exploit. You can see which browser version you're using here, or follow this guide
+    for instructions on how to update. Some browsers will auto-update to the latest stable version.
+
+- point: Block ads
+  category: Web Browsing
+  priority: Essential
+  details: >-
+    Using an ad-blocker can help improve your privacy, by blocking the trackers that ads implement.
+    uBlock Origin is a very efficient and open source browser addon, developed by Raymond Hill.
+    When 3rd-party ads are displayed on a webpage, they have the ability to track you, gathering personal
+    information about you and your habits, which can then be sold, or used to show you more targeted ads,
+    and some ads are plain malicious or fake. Blocking ads also makes pages load faster, uses less data
+    and provides a less cluttered experience.
+
+- point: Secure your account
+  category: Social Media
+  priority: Essential
+  details: >-
+    Use a long and unique password, enable 2FA and be careful while logging in. Your social media account
+    provides an easy entry point to all your other online accounts for an attacker.
+
+- point: Set up a mobile carrier PIN
+  category: Mobile Devices
+  priority: Essential
+  details: >-
+    A mobile carrier PIN is a security code that you set up with your mobile service provider to protect
+    your account from unauthorized access. This prevents SIM swapping attacks where someone could take
+    control of your phone number. Contact your carrier to set up this PIN.
+
+- point: Keep your OS up to date
+  category: Personal Computers
+  priority: Essential
+  details: >-
+    Operating system updates often include critical security patches that fix vulnerabilities.
+    Enable automatic updates to ensure you're always protected against the latest threats.
+
+- point: Activate screen lock
+  category: Personal Computers
+  priority: Essential
+  details: >-
+    Set up a screen lock with a password, PIN, or biometric authentication to prevent
+    unauthorized access to your computer when you step away.
+
+- point: Delete unused apps
+  category: Personal Computers
+  priority: Essential
+  details: >-
+    Uninstall applications that you don't need or use regularly. Unused apps can run
+    in the background, slow your device down, and potentially collect data.
+
+- point: Delete browser data and cookies
+  category: Personal Computers
+  priority: Essential
+  details: >-
+    Regularly clear your browser history, cookies, and cached data to remove tracking
+    information and improve privacy.
+
+- point: Ensure antivirus is up to date
+  category: Personal Computers
+  priority: Essential
+  details: >-
+    Keep your antivirus software updated with the latest virus definitions to protect
+    against new malware and threats.
+
+- point: Ensure firewall is enabled
+  category: Personal Computers
+  priority: Essential
+  details: >-
+    Enable your computer's built-in firewall to block unauthorized network connections
+    and protect against network-based attacks. 

@@ -9,8 +9,8 @@ export const RouterHead = component$(() => {
   return (
     <>
       {/* Basics */}
-      <title>{head.title || 'Digital Defense - The ultimate personal security checklist to secure your digital life'}</title>
-      <meta name="description" content="The ultimate personal security checklist to secure your digital life" />
+      <title>{head.title || 'Digital Checklist - Personal digital checklist to secure your digital life'}</title>
+      <meta name="description" content="Personal digital checklist to secure your digital life" />
       
       {/* Site config */}
       <link rel="canonical" href={loc.url.href} />
@@ -21,18 +21,20 @@ export const RouterHead = component$(() => {
       <link rel="manifest" href="/manifest.json" />
 
       {/* Open Graph / Facebook */}
+      <meta property="og:site_name" content="Digital Checklist" />
       <meta property="og:type" content="website" />
-      <meta property="og:url" content={loc.url.href} />
-      <meta property="og:title" content="Digital Defense - The ultimate personal security checklist to secure your digital life" />
-      <meta property="og:description" content="The ultimate personal security checklist to secure your digital life" />
-      <meta property="og:image" content="/banner.png" />
+      <meta property="og:url" content="https://digital-defense.io/" />
+      <meta property="og:title" content="Digital Checklist - Personal digital checklist to secure your digital life" />
+      <meta property="og:description" content="A free, open source, community-maintained checklist of digital security best practices" />
+      <meta property="og:image" content="https://i.ibb.co/rGQK71g/personal-security-checklist-6.png" />
 
       {/* Twitter */}
       <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:url" content={loc.url.href} />
-      <meta name="twitter:title" content="Digital Defense - The ultimate personal security checklist to secure your digital life" />
-      <meta name="twitter:description" content="The ultimate personal security checklist to secure your digital life" />
-      <meta name="twitter:image" content="/banner.png" />
+      <meta name="twitter:site" content="@Lissy_Sykes" />
+      <meta name="twitter:title" content="Digital Checklist - Personal digital checklist to secure your digital life" />
+      <meta name="twitter:description" content="A free, open source, community-maintained checklist of digital security best practices" />
+      <meta name="twitter:image" content="https://i.ibb.co/rGQK71g/personal-security-checklist-6.png" />
+      <meta name="twitter:image:alt" content="Personal Security Checklist" />
 
       {head.meta.map((m) => (
         <meta key={m.key} {...m} />
